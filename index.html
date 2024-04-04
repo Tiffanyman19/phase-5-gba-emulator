@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>GBA.js</title>
+<title>GBA Emulator</title>
 <link rel="stylesheet" href="resources/main.css">
 <script src="js/util.js"></script>
 <script src="js/core.js"></script>
@@ -269,7 +269,7 @@ function enableDebug() {
 		debug.postMessage('connect', document.domain || '*');
 	}
 }
-
+/*Window game size displayed*/
 document.addEventListener('webkitfullscreenchange', function() {
 	var canvas = document.getElementById('screen');
 	if (document.webkitIsFullScreen) {
@@ -310,6 +310,5 @@ document.addEventListener('webkitfullscreenchange', function() {
 		<p id="openDebug" onclick="enableDebug()">Debugger</p>
 	</div>
 </section>
-
 </body>
 </html>

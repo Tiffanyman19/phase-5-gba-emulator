@@ -1,4 +1,11 @@
 RETRO GAMING
 -A Tiffany Man Production-
 
-Pickle
+START: ENTER
+SELECT: \
+A: Z
+D-PAD: DIRECTION PAD ON KEYBOARD
+B:X
+
+
+

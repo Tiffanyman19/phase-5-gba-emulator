@@ -1,21 +1,31 @@
 function GameBoyAdvanceAudio() {
 	window.AudioContext = window.AudioContext || window.webkitAudioContext;
 	if (window.AudioContext) {
-		var self = this;
-		this.context = new AudioContext();
-		this.bufferSize = 0;
-		this.bufferSize = 4096;
-		this.maxSamples = this.bufferSize << 2;
-		this.buffers = [new Float32Array(this.maxSamples), new Float32Array(this.maxSamples)];
-		this.sampleMask = this.maxSamples - 1;
-		if (this.context.createScriptProcessor) {
-			this.jsAudio = this.context.createScriptProcessor(this.bufferSize);
-		} else {
-			this.jsAudio = this.context.createJavaScriptNode(this.bufferSize);
-		}
-		this.jsAudio.onaudioprocess = function(e) { self.audioProcess(e) };
+	var self = this;
+	this.context = new AudioContext();
+	this.bufferSize = 0;
+	this.bufferSize = 4096;
+	this.maxSamples = this.bufferSize << 2;
+	this.buffers = [new Float32Array(this.maxSamples), new Float32Array(this.maxSamples)];
+	this.sampleMask = this.maxSamples - 1;
+	if (this.context.createScriptProcessor) {
+		this.jsAudio = this.context.createScriptProcessor(this.bufferSize);
 	} else {
-		this.context = null;
+		this.jsAudio = this.context.createJavaScriptNode(this.bufferSize);
+	}
+
+	  // Add this code to resume the AudioContext
+	document.addEventListener('click', function() {
+		self.context.resume().then(function() {
+		console.log('AudioContext is now resumed!');
+		}).catch(function(error) {
+		console.error('Failed to resume AudioContext:', error);
+		});
+	});
+
+	this.jsAudio.onaudioprocess = function(e) { self.audioProcess(e) };
+	} else {
+	this.context = null;
 	}
 
 	this.masterEnable = true;
@@ -25,6 +35,7 @@ function GameBoyAdvanceAudio() {
 	this.FIFO_MAX = 0x200;
 	this.PSG_MAX = 0x080;
 };
+
 
 GameBoyAdvanceAudio.prototype.clear = function() {
 	this.fifoA = [];
