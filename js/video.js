@@ -1,3 +1,5 @@
+//Visual Appearance, like colors, being displayed when the ROM is playing
+
 function GameBoyAdvanceVideo() {
 	this.renderPath = new GameBoyAdvanceSoftwareRenderer();
 

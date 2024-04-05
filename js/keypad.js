@@ -1,3 +1,5 @@
+
+//Mapping the controls to the keyboard
 function GameBoyAdvanceKeypad() {
 	this.KEYCODE_LEFT = 37;
 	this.KEYCODE_UP = 38;
@@ -140,7 +142,7 @@ GameBoyAdvanceKeypad.prototype.pollGamepads = function() {
 		navigatorList = navigator.getGamepads();
 	}
 
-	// Let's all give a shout out to Chrome for making us get the gamepads EVERY FRAME
+	
 	if (navigatorList.length) {
 		this.gamepads = [];
 	}
@@ -154,7 +156,7 @@ GameBoyAdvanceKeypad.prototype.pollGamepads = function() {
 	}
 
 };
-
+//Controller is connected when plugged in
 GameBoyAdvanceKeypad.prototype.registerHandlers = function() {
 	window.addEventListener("keydown", this.keyboardHandler.bind(this), true);
 	window.addEventListener("keyup", this.keyboardHandler.bind(this), true);

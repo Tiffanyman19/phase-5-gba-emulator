@@ -1,3 +1,5 @@
+
+
 function MemoryView(memory, offset) {
 	this.inherit();
 	this.buffer = memory;
