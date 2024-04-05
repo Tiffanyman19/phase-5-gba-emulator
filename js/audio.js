@@ -1,3 +1,5 @@
+//The audio.js allows audio from the the ROM, if available, to play when the ROM is selected to play
+//Audio can be played on Google Chrome
 function GameBoyAdvanceAudio() {
 	window.AudioContext = window.AudioContext || window.webkitAudioContext;
 	if (window.AudioContext) {
@@ -14,7 +16,7 @@ function GameBoyAdvanceAudio() {
 		this.jsAudio = this.context.createJavaScriptNode(this.bufferSize);
 	}
 
-	  // Add this code to resume the AudioContext
+	  // Resume the AudioContext
 	document.addEventListener('click', function() {
 		self.context.resume().then(function() {
 		console.log('AudioContext is now resumed!');
