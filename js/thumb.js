@@ -1,7 +1,9 @@
 ARMCoreThumb = function (cpu) {
 	this.cpu = cpu;
 };
-
+//The constructADC function takes two parameters: rd and rm. These parameters represent the destination register (rd) and the source register (rm) for the ADC instruction.
+//Inside the function, there is a reference to this.cpu, which suggests that the function is being called within a larger context where cpu is defined.
+//The gprs variable is used to reference the general-purpose registers of the CPU.
 ARMCoreThumb.prototype.constructADC = function(rd, rm) {
 	var cpu = this.cpu;
 	var gprs = cpu.gprs;

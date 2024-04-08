@@ -3,7 +3,7 @@ function SRAMSavedata(size) {
 
 	this.writePending = false;
 };
-
+//Creating save files for the ROMs you played.
 SRAMSavedata.prototype = Object.create(MemoryView.prototype);
 
 SRAMSavedata.prototype.store8 = function(offset, value) {

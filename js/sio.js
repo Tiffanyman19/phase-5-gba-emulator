@@ -8,7 +8,7 @@ function GameBoyAdvanceSIO() {
 
 	this.BAUD = [ 9600, 38400, 57600, 115200 ];
 }
-
+//SIO is for serial Input and output
 GameBoyAdvanceSIO.prototype.clear = function() {
 	this.mode = this.SIO_GPIO;
 	this.sd = false;

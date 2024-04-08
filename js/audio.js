@@ -16,7 +16,7 @@ function GameBoyAdvanceAudio() {
 		this.jsAudio = this.context.createJavaScriptNode(this.bufferSize);
 	}
 
-	  // Resume the AudioContext
+	  // Resume the AudioContext. This allows the audio to play whent he ROM is in use in the emulator.
 	document.addEventListener('click', function() {
 		self.context.resume().then(function() {
 		console.log('AudioContext is now resumed!');
