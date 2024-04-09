@@ -178,10 +178,10 @@ function togglePause() {
 	}
 }
 
-function screenshot() {
-	var canvas = gba.indirectCanvas;
-	window.open(canvas.toDataURL('image/png'), 'screenshot');
-}
+// function screenshot() {
+// 	var canvas = gba.indirectCanvas;
+// 	window.open(canvas.toDataURL('image/png'), 'screenshot');
+// }
 
 function lcdFade(context, target, callback) {
 	var i = 0;
@@ -297,7 +297,6 @@ document.addEventListener('webkitfullscreenchange', function() {
 		<button id="pause" class="bigbutton" onclick="togglePause()">PAUSE</button>
 		<button class="bigbutton" onclick="reset()">RESET</button>
 		<button onclick="gba.downloadSavedata()">Download Savegame</button>
-		<button onclick="screenshot()">Screenshot</button>
 		<label id="pixelated">
 			<input type="checkbox" onchange="setPixelated(this.checked)">
 			<p>Pixelated</p>

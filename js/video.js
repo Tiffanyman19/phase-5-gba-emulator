@@ -164,7 +164,6 @@ GameBoyAdvanceVideo.prototype.writeDisplayStat = function(value) {
 	this.vcountSetting = (value & 0xFF00) >> 8;
 
 	if (this.vcounterIRQ) {
-		// FIXME: this can be too late if we're in the middle of an Hblank
 		this.nextVcounterIRQ = this.nextHblank + this.HBLANK_LENGTH + (this.vcountSetting - this.vcount) * this.HORIZONTAL_LENGTH;
 		if (this.nextVcounterIRQ < this.nextEvent) {
 			this.nextVcounterIRQ += this.TOTAL_LENGTH;
