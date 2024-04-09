@@ -71,10 +71,10 @@ button {
 }
 
 button {
-	background-color: #7f7f7f;
+	background-color: #f200ff;
 	font-weight: bold;
 	font-size: 18px;
-	color: white;
+	color: rgb(255, 255, 255);
 	text-shadow: 0 3px #433061;
 	padding: 2px 10px 5px;
 	border-radius: 0 0 10px 10px;
@@ -94,6 +94,12 @@ label, #sound, #controls > div > p {
 label, #sound {
 	float: left;
 	clear: left;
+}
+
+#displaycontrols{
+	list-style-type: none;
+	text-align: left;
+	color: rgb(255, 255, 255);
 }
 
 #sound + p {
