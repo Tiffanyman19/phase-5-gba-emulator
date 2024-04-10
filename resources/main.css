@@ -1,6 +1,6 @@
 body {
-	background: url('bg.png') no-repeat top center, -webkit-linear-gradient(#06cdf6 560px, #06cdf6 620px, #433061 900px);
-	background: url('bg.png') no-repeat top center, -moz-linear-gradient(#06cdf6 560px, #06cdf6 620px, #433061 900px, #433061);
+	background: url('bg.png') no-repeat top center, -webkit-linear-gradient(#06cdf6 560px, #06cdf6 620px, #01819a 900px);
+	background: url('bg.png') no-repeat top center, -moz-linear-gradient(#06cdf6 560px, #06cdf6 620px, #01819a 900px, #01819a);
 	text-align: center;
 	margin: 0 0 15px;
 	color: white;
@@ -37,8 +37,8 @@ button {
 	border: 1px solid rgba(0, 0, 0, 0.4);
 	border-width: 0 1px;
 	margin: 0 -5px 20px;
-	background: -webkit-linear-gradient(top, #07bee3, #0ab9dc 15%, #06cdf6 50%, #433061);
-	background: -moz-linear-gradient(top, #07bee3, #0ab9dc 15%, #06cdf6 50%, #433061);
+	background: -webkit-linear-gradient(top, #07bee3, #0ab9dc 15%, #06cdf6 50%, #005e95);
+	background: -moz-linear-gradient(top, #07bee3, #0ab9dc 15%, #06cdf6 50%, #0023b0);
 	box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.6);
 	position: absolute;
 }
@@ -71,7 +71,7 @@ button {
 }
 
 button {
-	background-color: #f200ff;
+	background-color: #8a898a;
 	font-weight: bold;
 	font-size: 18px;
 	color: rgb(255, 255, 255);
@@ -140,7 +140,7 @@ p:first-child {
 }
 
 a:link, a:visited {
-	color: #fcb3f0;
+	color: #ff00d4;
 }
 
 .hidden {
