@@ -8,6 +8,8 @@ I have the answer to your problem! My GBA emulator is the answers to your probel
 
 This emulator allows you to plau your roms on your computer from anymore you want! All you need is to get a ROM of your favorite game!
 
+You can pause and reset the emuator from a push of a button!
+
 
 -Controls-
 GBA Buttons : Keyboard
